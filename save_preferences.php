@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location  = $_POST['location'];
     $duration  = $_POST['duration'];
     $climate   = $_POST['climate'];
-    $visa_free = $_POST['visa'];  // form field is still named 'visa'
+    $visa_free = $_POST['visa_free'];  // form field is still named 'visa'
     $user_id   = $_SESSION['user_id'];
 
     $stmt = $conn->prepare("UPDATE users SET activity=?, budget=?, location=?, duration=?, climate=?, visa_free=? WHERE id=?");
