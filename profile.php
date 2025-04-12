@@ -109,7 +109,7 @@ $stmt->close();
 
         <select name="climate" required>
           <option value="">Preferred Climate</option>
-          <option value="tropical">Tropical</option>
+          <option value="hot">Tropical</option>
           <option value="cold">Cold</option>
           <option value="moderate">Moderate</option>
         </select>
