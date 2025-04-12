@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | TravelMate</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body style="background: url('https://i.pinimg.com/736x/b6/64/d3/b664d338dea49b5d2029921495544567.jpg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <div class="logo">TravelMate</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li id="auth-link"><a href="login.html">Login / Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Have questions? We're here to help!</p>
+
+        <div class="contact-details">
+            <div class="contact-item">
+                <h3>☎ Phone</h3>
+                <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+            <div class="contact-item">
+                <h3>✉ Email</h3>
+                <p class="email-text">
+                    <a href="mailto:support@travelmate.com">support@travelmate.com</a>
+                </p>
+            </div>
+            <div class="contact-item">
+                <h3>🅾 Instagram</h3>
+                <p>
+                    <a href="https://www.instagram.com/_travel.mate__" target="_blank">
+                        <strong>@_travel.mate__</strong>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form action="contact.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+            <h3>📍 Our Location</h3>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54849.69161203741!2d75.52766937120603!3d31.32601564315456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5a3862403c15%3A0xfba0d9f3f767dcb2!2sJalandhar%2C%20Punjab%2C%20India!5e0!3m2!1sen!2sin!4v1707598301113!5m2!1sen!2sin"
+                width="100%" height="300" style="border:0;" allowfullscreen loading="lazy">
+            </iframe>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TravelMate. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

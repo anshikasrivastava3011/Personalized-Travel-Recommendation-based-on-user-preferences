@@ -1,0 +1,260 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('https://i.pinimg.com/736x/31/c0/95/31c09532461427a49a69d85edc24f623.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;  /* Ensures background fills screen */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #005a8d;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Profile Container */
+.profile-container {
+    background: #fff;
+    color: #333;
+    max-width: 900px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    flex: 1;
+}
+
+h2, h3 {
+    color: #005a8d;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Preferences Form */
+.pref-form select,
+.pref-form button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.pref-form button {
+    background: #005a8d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pref-form button:hover {
+    background-color: #003f6b;
+}
+
+/* Recommendations Layout */
+.recommendations ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+.recommendation-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.recommendation-scroll::-webkit-scrollbar {
+    height: 10px;
+}
+
+.recommendation-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.recommendation-card {
+    min-width: 220px;
+    max-width: 220px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.recommendation-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px;
+    color: #005a8d;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.03);
+}
+.centered-text {
+    text-align: center;
+}
+
+.centered-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.centered-text li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #003c75;
+}
+.two-column {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.preference-columns {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.preference-columns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.preference-columns li {
+    margin: 12px 0;
+    font-size: 1.1rem;
+    color: #003c75;
+}
+/* Profile header section */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  
+  .profile-header h2 {
+    font-size: 2rem;
+    color: #005a8d;
+    margin-bottom: 0.3rem;
+  }
+  
+  .profile-header p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #005a8d;
+  }
+  
+  /* Stylish preferences */
+  .enhanced-preferences {
+    background: #f4f9ff;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 25px;
+    box-shadow: 0 6px 20px rgba(0, 90, 141, 0.08);
+  }
+  
+  /* Quote/banner section */
+  .travel-quote {
+    margin-top: 50px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #005a8d;
+    font-style: italic;
+  }
+  

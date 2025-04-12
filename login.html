@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Signup - TravelMate</title>
+    <link rel="stylesheet" href="login.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body style="background: url('https://i.pinimg.com/736x/4b/87/1c/4b871ca2d5e9976e10ead764ab9c25ae.jpg') no-repeat center center fixed; background-size: cover;">
+    <div class="auth-container">
+        <div class="form-toggle">
+            <button id="loginToggle" class="active" onclick="toggleForm('login')">Login</button>
+            <button id="signupToggle" onclick="toggleForm('signup')">Sign Up</button>
+        </div>
+
+        <div class="form-box">
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form" action="login.php" method="POST">
+                <h2>Login to TravelMate</h2>
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit">Login</button>
+            </form>
+
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="auth-form hidden" action="signup.php" method="POST">
+                <h2>Create an Account</h2>
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit">Sign Up</button>
+              </form>
+              
+                <!-- END -->            
+
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(form) {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signupForm').classList.add('hidden');
+            document.getElementById('loginToggle').classList.remove('active');
+            document.getElementById('signupToggle').classList.remove('active');
+
+            if (form === 'login') {
+                document.getElementById('loginForm').classList.remove('hidden');
+                document.getElementById('loginToggle').classList.add('active');
+            } else {
+                document.getElementById('signupForm').classList.remove('hidden');
+                document.getElementById('signupToggle').classList.add('active');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #005a8d;
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #005a8d;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://plus.unsplash.com/premium_photo-1721995000591-043f2c482df2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* This makes it use full height of .hero */
+    width: 100%;
+}
+
+.hero-box {
+    background: rgba(30, 80, 120, 0.5); /* more opaque blue */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 4rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 700px;
+    color: #ffffff;
+    animation: floatIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 3rem; /* ✅ Add this line */
+}
+
+.hero-box:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.hero-box h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.hero-box p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Animation Keyframe */
+@keyframes floatIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.search-bar select {
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    background-color: #e3f2fd; 
+    color: #003c75;
+    text-align: center;
+    text-align-last: center;  
+    cursor: pointer;
+    appearance: none; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.search-bar option {
+    direction: rtl;
+    text-align: left;
+}
+
+.search-bar select:focus {
+    background-color: #e3f2fd;  
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.2);
+    transform: translateY(-2px);
+}
+
+.search-bar button {
+    padding: 0.9rem 1.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: none;
+    background-color: #1565c0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar button:hover {
+    background-color: #0d47a1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Trending Destinations */
+.trending-destinations {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.trending-destinations h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: #005a8d;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.destination {
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.destination img {
+    width: 100%;
+    height: auto; /* Show full image */
+    object-fit: cover;
+    display: block;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.destination:hover {
+    transform: translateY(-5px);
+}
+
+.destination h3, .destination p {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.destination h3 {
+    margin-top: 1rem;
+    color: #0d47a1;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.destination p {
+    margin: 0.5rem 0 1.5rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Call-to-Action Section */
+.cta {
+    text-align: center;
+    padding: 40px;
+    background: #005a8d;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 32px;
+}
+
+.cta p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background: #ffcc00;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #e6b800;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer nav ul li {
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer nav ul li a:hover {
+    color: white;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.why-travelmate {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1444790925621-0342dd3ca58d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    padding: 80px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-travelmate .why-content {
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 60px 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.why-travelmate .why-content:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.why-travelmate h2 {
+    font-size: 2.8rem;
+    color: #005a8d;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.why-travelmate p {
+    font-size: 1.25rem;
+    line-height: 2;
+    color: #333;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
