@@ -81,7 +81,7 @@ $stmt->close();
           <option value="skydiving">Skydiving</option>
           <option value="scubadiving">Scubadiving</option>
           <option value="museums">Museums</option>
-          <option value="historicalplaces">Historical places</option>
+          <option value="historicalplaces">History Nerd</option>
         </select>
 
         <select name="budget" required>
