@@ -9,7 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 
-<body style="background: url('https://i.pinimg.com/736x/b6/64/d3/b664d338dea49b5d2029921495544567.jpg') no-repeat center center fixed; background-size: cover;">
+<body
+  style="background: url('https://i.pinimg.com/736x/b6/64/d3/b664d338dea49b5d2029921495544567.jpg') no-repeat center center fixed; background-size: cover;">
   <header>
     <div class="logo">TravelMate</div>
     <nav>
@@ -48,10 +49,29 @@
       </div>
     </div>
 
-    <!-- Contact Form (updated with Formspree) -->
+    <!-- Success/Error Message -->
+    <div id="success-message" class="success-banner" style="display: none;">
+      Message sent successfully!
+    </div>
+    <div id="error-message" class="error-banner" style="display: none;">
+      Failed to send message. Please try again.
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('success') === '1') {
+        document.getElementById('success-message').style.display = 'block';
+        setTimeout(() => document.getElementById('success-message').style.display = 'none', 5000);
+      } else if (params.get('error') === '1') {
+        document.getElementById('error-message').style.display = 'block';
+        setTimeout(() => document.getElementById('error-message').style.display = 'none', 5000);
+      }
+    </script>
+
+    <!-- Contact Form -->
     <div class="contact-form">
       <h3>Send Us a Message</h3>
-      <form action="https://formspree.io/f/xzzeqobq" method="POST">
+      <form action="contact.php" method="POST">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>

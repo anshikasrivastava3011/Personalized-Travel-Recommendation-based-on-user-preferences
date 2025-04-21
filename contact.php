@@ -1,22 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "travelmate.contactt@gmail.com"; // Receiver email
     $name = htmlspecialchars($_POST["name"]);
     $email = htmlspecialchars($_POST["email"]);
     $message = htmlspecialchars($_POST["message"]);
 
-    $to = "support@travelmate.com"; 
-    $subject = "New Contact Form Message";
-    $headers = "From: " . $email;
-
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $subject = "New Contact Message from $name";
+    $body = "Name: $name\nEmail: $email\nMessage:\n$message";
+    $headers = "From: $email\r\nReply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully!";
+        // ✅ Success — Redirect with success flag
+        header("Location: contact.html?success=1");
+        exit();
     } else {
-        echo "Failed to send message.";
+        // ❌ Failure — Redirect with error flag
+        header("Location: contact.html?error=1");
+        exit();
     }
-} else {
-    header("Location: contact.html");
-    exit();
 }
 ?>
