@@ -16,15 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($check->num_rows > 0) {
         echo "<script>alert('Email already registered!'); window.location.href='login.html';</script>";
     } else {
-        // Insert new user
         $stmt = $conn->prepare("INSERT INTO users (name, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $name, $email, $password);
 
         if ($stmt->execute()) {
-            // Set session ID
             $_SESSION['user_id'] = $conn->insert_id;
 
-            // ✅ Send welcome email
             $to = $email;
             $subject = "Welcome to TravelMate!";
             $message = "
